@@ -1,430 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tech Help at Home — Owensboro</title>
-  <style>
-    :root{
-      --navy:#16263d;
-      --red:#ef4b43;
-      --red-dark:#db3f38;
-      --bg:#f3f1f3;
-      --card:#ffffff;
-      --muted:#5d6470;
-      --line:#e7e4e8;
-      --bluebar:#426b97;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tech Help at Home — Owensboro</title>
 
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      color:var(--navy);
-      background:
-        linear-gradient(rgba(255,255,255,.82), rgba(255,255,255,.82)),
-        radial-gradient(circle at 20% 20%, rgba(0,0,0,.03) 0 1px, transparent 1px 100%),
-        radial-gradient(circle at 80% 60%, rgba(0,0,0,.02) 0 1px, transparent 1px 100%),
-        #f3f1f3;
-      background-size:auto, 18px 18px, 22px 22px, auto;
-    }
+<style>
 
-    .top-strip{
-      height:34px;
-      background:
-        linear-gradient(rgba(0,0,0,.07), rgba(0,0,0,.07)),
-        linear-gradient(90deg, #4f77a2, #5c87b7);
-    }
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin:0;
+background:#f3f1f3;
+color:#1e2a3a;
+}
 
-    .wrap{
-      max-width:1120px;
-      margin:0 auto;
-      padding:0 28px 40px;
-    }
+.container{
+max-width:1200px;
+margin:auto;
+padding:40px 30px;
+}
 
-    .topbar{
-      display:flex;
-      justify-content:space-between;
-      align-items:flex-start;
-      gap:20px;
-      padding:18px 0 10px;
-    }
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:30px;
+}
 
-    .brand h2{
-      margin:0;
-      font-size:34px;
-      line-height:1.1;
-      font-weight:800;
-      letter-spacing:-0.5px;
-    }
+.title{
+font-size:34px;
+font-weight:800;
+}
 
-    .brand .sub{
-      margin-top:10px;
-      color:#28334a;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
+.subtitle{
+color:#445066;
+margin-top:6px;
+}
 
-    .call-area{
-      text-align:right;
-      min-width:380px;
-    }
+.callbtn{
+background:#ef4b43;
+color:white;
+padding:14px 24px;
+border-radius:40px;
+font-size:20px;
+font-weight:bold;
+text-decoration:none;
+}
 
-    .call-pill{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      background:var(--red);
-      color:#fff;
-      padding:14px 24px;
-      border-radius:999px;
-      font-size:24px;
-      font-weight:800;
-      text-decoration:none;
-      box-shadow: inset 0 -2px 0 rgba(0,0,0,.1);
-      white-space:nowrap;
-    }
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
 
-    .call-pill:hover,
-    .cta:hover{
-      background:var(--red-dark);
-    }
+.hero h1{
+font-size:64px;
+line-height:1;
+margin:0 0 20px 0;
+}
 
-    .call-note{
-      margin-top:10px;
-      font-size:16px;
-      color:#1d2740;
-    }
+.red{
+color:#ef4b43;
+}
 
-    .hero{
-      display:grid;
-      grid-template-columns: 1.1fr .95fr;
-      gap:36px;
-      align-items:center;
-      padding:28px 0 22px;
-      border-top:1px solid rgba(0,0,0,.04);
-    }
+.hero p{
+font-size:22px;
+color:#3a4658;
+}
 
-    .hero h1{
-      margin:0 0 18px;
-      font-size:68px;
-      line-height:.98;
-      letter-spacing:-1.8px;
-      font-weight:900;
-    }
+.cta{
+display:inline-block;
+background:#ef4b43;
+color:white;
+padding:14px 22px;
+font-size:20px;
+border-radius:10px;
+margin-top:20px;
+text-decoration:none;
+}
 
-    .hero h1 .red{ color:var(--red); }
+.hero img{
+width:100%;
+max-width:520px;
+border-radius:8px;
+}
 
-    .hero .lede{
-      font-size:25px;
-      line-height:1.45;
-      color:#263149;
-      max-width:720px;
-      margin-bottom:18px;
-    }
+.section{
+margin-top:50px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
 
-    .cta{
-      display:inline-flex;
-      align-items:center;
-      gap:12px;
-      background:var(--red);
-      color:#fff;
-      text-decoration:none;
-      font-weight:900;
-      font-size:24px;
-      padding:14px 24px;
-      border-radius:14px;
-      box-shadow: inset 0 -2px 0 rgba(0,0,0,.12);
-      margin:8px 0 14px;
-    }
+.section h2{
+font-size:44px;
+margin-bottom:10px;
+}
 
-    .county{
-      font-size:22px;
-      color:#243049;
-      margin:0 0 20px;
-    }
+.price{
+font-size:28px;
+font-weight:bold;
+color:#1e3a68;
+}
 
-    .problems{
-      list-style:none;
-      padding:0;
-      margin:10px 0 22px;
-    }
+ul{
+font-size:22px;
+line-height:1.6;
+}
 
-    .problems li{
-      display:flex;
-      align-items:flex-start;
-      gap:14px;
-      font-size:28px;
-      line-height:1.35;
-      margin:10px 0;
-      color:#233047;
-    }
+.footer{
+text-align:center;
+margin-top:50px;
+}
 
-    .check{
-      color:#4e7d53;
-      font-weight:900;
-      font-size:28px;
-      line-height:1;
-      margin-top:3px;
-    }
+.footer a{
+background:#ef4b43;
+color:white;
+padding:16px 26px;
+border-radius:10px;
+font-size:24px;
+text-decoration:none;
+}
 
-    .quick{
-      font-size:28px;
-      margin:10px 0 14px;
-      color:#233047;
-    }
+@media(max-width:900px){
 
-    .minor-note{
-      text-align:center;
-      color:#2c3650;
-      font-size:19px;
-      line-height:1.35;
-      margin-top:10px;
-    }
+.hero{
+grid-template-columns:1fr;
+}
 
-    .hero-image,
-    .price-image{
-      width:100%;
-      border-radius:0;
-      display:block;
-      object-fit:cover;
-      box-shadow:none;
-    }
+.section{
+grid-template-columns:1fr;
+}
 
-    .hero-image{
-      aspect-ratio: 1.22 / 1;
-    }
+.hero h1{
+font-size:46px;
+}
 
-    .section{
-      display:grid;
-      grid-template-columns: 1fr .92fr;
-      gap:36px;
-      align-items:center;
-      padding:34px 0 18px;
-      border-top:1px solid rgba(0,0,0,.05);
-    }
+}
 
-    .section h2{
-      font-size:56px;
-      margin:0 0 14px;
-      line-height:1;
-      letter-spacing:-1px;
-    }
-
-    .price{
-      font-size:30px;
-      font-weight:800;
-      color:#24406e;
-      margin:0 0 10px;
-    }
-
-    .section p{
-      font-size:24px;
-      color:#2a3348;
-      margin:0 0 16px;
-    }
-
-    .final{
-      text-align:center;
-      padding:22px 0 28px;
-      border-top:1px solid rgba(0,0,0,.05);
-    }
-
-    .final h3{
-      margin:0 0 16px;
-      font-size:34px;
-      line-height:1.15;
-      font-weight:900;
-      color:#1f2a42;
-    }
-
-    .final .cta{
-      min-width:420px;
-      justify-content:center;
-      font-size:24px;
-      padding:15px 24px;
-      border-radius:14px;
-      margin-bottom:8px;
-    }
-
-    .final p{
-      margin:8px 0 0;
-      font-size:22px;
-      color:#33415c;
-    }
-
-    .phone-icon{
-      width:28px;
-      height:28px;
-      display:inline-block;
-      border:3px solid currentColor;
-      border-radius:999px;
-      position:relative;
-      transform:rotate(-12deg);
-    }
-
-    .phone-icon:before,
-    .phone-icon:after{
-      content:"";
-      position:absolute;
-      background:currentColor;
-      border-radius:2px;
-    }
-
-    .phone-icon:before{
-      width:8px;height:18px;left:7px;top:2px;
-      transform:skew(-18deg);
-    }
-
-    .phone-icon:after{
-      width:14px;height:5px;left:4px;bottom:2px;
-    }
-
-    @media (max-width: 980px){
-      .topbar,
-      .hero,
-      .section{
-        grid-template-columns:1fr;
-        display:block;
-      }
-
-      .call-area{
-        min-width:0;
-        text-align:left;
-        margin-top:14px;
-      }
-
-      .hero h1{font-size:52px}
-      .section h2{font-size:42px}
-      .problems li{font-size:22px}
-      .hero .lede,
-      .quick,
-      .county,
-      .section p,
-      .price,
-      .final p{font-size:20px}
-      .brand h2{font-size:28px}
-      .call-pill,.cta{font-size:20px}
-      .final .cta{
-        min-width:0;
-        width:100%;
-      }
-      .hero-image,.price-image{
-        margin-top:16px;
-      }
-    }
-
-    @media (max-width: 640px){
-      .wrap{padding:0 18px 30px}
-      .hero h1{font-size:42px}
-      .section h2{font-size:36px}
-      .brand .sub{font-size:16px}
-      .call-note{font-size:15px}
-      .problems li{font-size:20px}
-      .quick{font-size:22px}
-    }
-  </style>
+</style>
 </head>
+
 <body>
-  <div class="top-strip"></div>
 
-  <div class="wrap">
-    <header class="topbar">
-      <div class="brand">
-        <h2>Tech Help at Home — Owensboro</h2>
-        <div class="sub">Local &nbsp;•&nbsp; Friendly &nbsp;•&nbsp; Same-Day Service</div>
-      </div>
+<div class="container">
 
-      <div class="call-area">
-        <a class="call-pill" href="tel:2023170875">
-          <span class="phone-icon" aria-hidden="true"></span>
-          <span>Call Now: 202-317-0875</span>
-        </a>
-        <div class="call-note">Serving Owensboro &amp; Daviess County</div>
-      </div>
-    </header>
+<div class="topbar">
+<div>
+<div class="title">Tech Help at Home — Owensboro</div>
+<div class="subtitle">Local • Friendly • Same-Day Service</div>
+</div>
 
-    <section class="hero">
-      <div>
-        <h1>Tech Problems?<br>We Fix Them <span class="red">Today.</span></h1>
+<a class="callbtn" href="tel:2023170875">Call Now: 202-317-0875</a>
+</div>
 
-        <div class="lede">
-          Local in-home tech help for phones, computers, WiFi, printers, and TVs.
-        </div>
+<div class="hero">
 
-        <a class="cta" href="tel:2023170875">
-          <span class="phone-icon" aria-hidden="true"></span>
-          <span>CALL NOW: 202-317-0875</span>
-        </a>
+<div>
 
-        <div class="county">Serving Owensboro &amp; Daviess County</div>
+<h1>
+Tech Problems?<br>
+We Fix Them <span class="red">Today.</span>
+</h1>
 
-        <ul class="problems">
-          <li><span class="check">✓</span><span>WiFi not working</span></li>
-          <li><span class="check">✓</span><span>Printer stopped working</span></li>
-          <li><span class="check">✓</span><span>Computer running slow</span></li>
-          <li><span class="check">✓</span><span>Email locked</span></li>
-          <li><span class="check">✓</span><span>Smart TV setup</span></li>
-          <li><span class="check">✓</span><span>New phone confusion</span></li>
-        </ul>
+<p>
+Local in-home tech help for phones, computers, WiFi, printers, and TVs.
+</p>
 
-        <div class="quick">Most problems fixed in one quick visit.</div>
+<a class="cta" href="tel:2023170875">CALL NOW: 202-317-0875</a>
 
-        <a class="cta" href="tel:2023170875" style="font-size:22px;padding:12px 22px;border-radius:12px;">
-          <span class="phone-icon" aria-hidden="true"></span>
-          <span>Call now: 202-317-0875</span>
-        </a>
+<p>Serving Owensboro & Daviess County</p>
 
-        <div class="minor-note">
-          Serving Owensboro &amp; Daviess County<br>
-          Reliable Local Help
-        </div>
-      </div>
+<ul>
+<li>✓ WiFi not working</li>
+<li>✓ Printer stopped working</li>
+<li>✓ Computer running slow</li>
+<li>✓ Email locked</li>
+<li>✓ Smart TV setup</li>
+<li>✓ New phone confusion</li>
+</ul>
 
-      <div>
-        <img
-          class="hero-image"
-          src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Technician helping with a laptop at home"
-        >
-      </div>
-    </section>
+</div>
 
-    <section class="section">
-      <div>
-        <h2>Simple Pricing</h2>
-        <div class="price">$50 visit + $40/hr</div>
-        <p>No surprises, clear and affordable.</p>
+<div>
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Tech support">
+</div>
 
-        <a class="cta" href="tel:2023170875" style="font-size:22px;padding:12px 22px;border-radius:12px;">
-          <span class="phone-icon" aria-hidden="true"></span>
-          <span>Call now: 202-317-0875</span>
-        </a>
+</div>
 
-        <div class="minor-note">
-          Serving Owensboro &amp; Daviess County<br>
-          Reliable Local Help
-        </div>
-      </div>
+<div class="section">
 
-      <div>
-        <img
-          class="price-image"
-          src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=1200"
-          alt="Local tech support using a laptop"
-        >
-      </div>
-    </section>
+<div>
 
-    <section class="final">
-      <h3>Still struggling with technology?</h3>
-      <a class="cta" href="tel:2023170875">
-        <span class="phone-icon" aria-hidden="true"></span>
-        <span>202-317-0875</span>
-      </a>
-      <p>Same-Day Owensboro service.</p>
-    </section>
-  </div>
+<h2>Simple Pricing</h2>
+
+<div class="price">$50 visit + $40/hr</div>
+
+<p>No surprises, clear and affordable.</p>
+
+<a class="cta" href="tel:2023170875">Call now: 202-317-0875</a>
+
+<p>Reliable local help</p>
+
+</div>
+
+<div>
+<img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg" alt="Laptop support">
+</div>
+
+</div>
+
+<div class="footer">
+
+<h2>Still struggling with technology?</h2>
+
+<br>
+
+<a href="tel:2023170875">202-317-0875</a>
+
+<p>Same-Day Owensboro service.</p>
+
+</div>
+
+</div>
+
 </body>
 </html>
