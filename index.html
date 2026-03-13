@@ -7,115 +7,65 @@
 <style>
 
 body{
-font-family:Arial;
+font-family:Arial, sans-serif;
 margin:0;
-background:#f4f4f4;
-color:#1f2a3a;
+background:#f5f5f5;
 }
 
 .container{
-max-width:1100px;
+max-width:900px;
 margin:auto;
 padding:40px;
-}
-
-.header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:40px;
-}
-
-.call{
-background:#ef4b43;
-color:white;
-padding:12px 20px;
-border-radius:25px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.hero{
-display:flex;
-gap:40px;
-align-items:center;
-}
-
-.hero-text{
-flex:1;
-}
-
-.hero img{
-width:400px;
-height:auto;
-border-radius:8px;
+background:white;
 }
 
 h1{
-font-size:56px;
+font-size:48px;
 margin-bottom:10px;
 }
 
 .red{
-color:#ef4b43;
+color:#e74c3c;
+}
+
+.hero-img{
+width:100%;
+max-width:500px;
+margin-top:20px;
 }
 
 .cta{
 display:inline-block;
-background:#ef4b43;
+background:#e74c3c;
 color:white;
-padding:14px 22px;
-border-radius:8px;
+padding:14px 20px;
+border-radius:6px;
 text-decoration:none;
-margin-top:20px;
-font-size:18px;
-}
-
-ul{
 font-size:20px;
-line-height:1.6;
+margin-top:20px;
 }
 
 .section{
-margin-top:60px;
-display:flex;
-gap:40px;
-align-items:center;
+margin-top:40px;
 }
 
 .price{
 font-size:26px;
 font-weight:bold;
-color:#1e3a68;
 }
 
 .footer{
-text-align:center;
 margin-top:60px;
+text-align:center;
 }
 
 .footer a{
-background:#ef4b43;
+background:#e74c3c;
 color:white;
-padding:16px 24px;
-border-radius:8px;
+padding:16px 22px;
 font-size:22px;
 text-decoration:none;
-}
-
-@media(max-width:900px){
-
-.hero,
-.section{
-flex-direction:column;
-text-align:center;
-}
-
-.hero img{
-width:100%;
-max-width:400px;
-}
-
+border-radius:6px;
 }
 
 </style>
@@ -125,21 +75,8 @@ max-width:400px;
 
 <div class="container">
 
-<div class="header">
-<div>
 <h2>Tech Help at Home — Owensboro</h2>
 <p>Local • Friendly • Same-Day Service</p>
-</div>
-
-<a class="call" href="tel:2023170875">
-Call Now: 202-317-0875
-</a>
-
-</div>
-
-<div class="hero">
-
-<div class="hero-text">
 
 <h1>
 Tech Problems?<br>
@@ -147,12 +84,20 @@ We Fix Them <span class="red">Today.</span>
 </h1>
 
 <p>
-Local in-home tech help for phones, computers, WiFi, printers and TVs.
+Local in-home tech help for phones, computers, WiFi, printers, and TVs.
 </p>
 
 <a class="cta" href="tel:2023170875">
 CALL NOW: 202-317-0875
 </a>
+
+<br><br>
+
+<img class="hero-img" src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
+
+<div class="section">
+
+<h2>Common Problems We Fix</h2>
 
 <ul>
 <li>WiFi not working</li>
@@ -165,27 +110,15 @@ CALL NOW: 202-317-0875
 
 </div>
 
-<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
-
-</div>
-
 <div class="section">
-
-<div>
 
 <h2>Simple Pricing</h2>
 
-<div class="price">$50 visit + $40/hr</div>
+<div class="price">$50 visit + $40/hour</div>
 
 <p>No surprises, clear and affordable.</p>
 
-<a class="cta" href="tel:2023170875">
-Call now
-</a>
-
-</div>
-
-<img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg">
+<a class="cta" href="tel:2023170875">Call now</a>
 
 </div>
 
@@ -193,11 +126,7 @@ Call now
 
 <h2>Still struggling with technology?</h2>
 
-<br>
-
 <a href="tel:2023170875">202-317-0875</a>
-
-<p>Same-Day Owensboro service</p>
 
 </div>
 
