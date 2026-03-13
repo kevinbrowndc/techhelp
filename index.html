@@ -1,71 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Owensboro Tech Help</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tech Help at Home — Owensboro</title>
 
 <style>
 
-body{
-font-family:Arial, sans-serif;
+*{
+box-sizing:border-box;
 margin:0;
-background:#f5f5f5;
+padding:0;
 }
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+background:#f3f5f8;
+color:#1d2a3a;
+line-height:1.5;
+}
+
+/* CONTAINER */
 
 .container{
-max-width:900px;
+max-width:1100px;
 margin:auto;
-padding:40px;
-background:white;
+padding:40px 20px;
 }
 
-h1{
-font-size:48px;
-margin-bottom:10px;
+/* HEADER */
+
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:40px;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+}
+
+.tagline{
+color:#555;
+font-size:15px;
+}
+
+.call-btn{
+background:#ef4b43;
+color:white;
+padding:14px 22px;
+border-radius:30px;
+text-decoration:none;
+font-weight:bold;
+font-size:18px;
+}
+
+/* HERO */
+
+.hero{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+margin-bottom:60px;
+}
+
+.hero h1{
+font-size:56px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
 .red{
-color:#e74c3c;
+color:#ef4b43;
 }
 
-.hero-img{
-width:100%;
-max-width:500px;
-margin-top:20px;
+.hero p{
+font-size:20px;
+margin-bottom:20px;
+color:#3d4a5d;
 }
+
+.hero ul{
+margin-top:10px;
+font-size:18px;
+}
+
+.hero li{
+margin-bottom:8px;
+}
+
+.hero img{
+width:100%;
+border-radius:10px;
+}
+
+/* BUTTON */
 
 .cta{
 display:inline-block;
-background:#e74c3c;
+background:#ef4b43;
 color:white;
-padding:14px 20px;
-border-radius:6px;
+padding:14px 24px;
+border-radius:8px;
 text-decoration:none;
-font-size:20px;
-margin-top:20px;
+font-size:18px;
+margin-top:15px;
 }
 
+/* SECTIONS */
+
 .section{
-margin-top:40px;
+margin-top:60px;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:10px;
 }
 
 .price{
 font-size:26px;
 font-weight:bold;
+color:#213c68;
+margin:10px 0;
 }
 
-.footer{
-margin-top:60px;
+/* FOOTER CTA */
+
+.final{
 text-align:center;
+margin-top:80px;
 }
 
-.footer a{
-background:#e74c3c;
+.final a{
+display:inline-block;
+background:#ef4b43;
 color:white;
-padding:16px 22px;
-font-size:22px;
+padding:16px 28px;
+border-radius:10px;
+font-size:24px;
 text-decoration:none;
-border-radius:6px;
+margin-top:20px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.section h2{
+font-size:32px;
+}
+
 }
 
 </style>
@@ -75,8 +172,26 @@ border-radius:6px;
 
 <div class="container">
 
-<h2>Tech Help at Home — Owensboro</h2>
-<p>Local • Friendly • Same-Day Service</p>
+<!-- HEADER -->
+
+<div class="header">
+
+<div>
+<div class="logo">Tech Help at Home — Owensboro</div>
+<div class="tagline">Local • Friendly • Same-Day Service</div>
+</div>
+
+<a class="call-btn" href="tel:2023170875">
+Call Now: 202-317-0875
+</a>
+
+</div>
+
+<!-- HERO -->
+
+<div class="hero">
+
+<div>
 
 <h1>
 Tech Problems?<br>
@@ -91,24 +206,26 @@ Local in-home tech help for phones, computers, WiFi, printers, and TVs.
 CALL NOW: 202-317-0875
 </a>
 
-<br><br>
-
-<img class="hero-img" src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
-
-<div class="section">
-
-<h2>Common Problems We Fix</h2>
-
 <ul>
-<li>WiFi not working</li>
-<li>Printer stopped working</li>
-<li>Computer running slow</li>
-<li>Email locked</li>
-<li>Smart TV setup</li>
-<li>New phone confusion</li>
+<li>✓ WiFi not working</li>
+<li>✓ Printer stopped working</li>
+<li>✓ Computer running slow</li>
+<li>✓ Email locked or hacked</li>
+<li>✓ Smart TV setup</li>
+<li>✓ New phone confusion</li>
 </ul>
 
 </div>
+
+<div>
+
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
+
+</div>
+
+</div>
+
+<!-- PRICING -->
 
 <div class="section">
 
@@ -116,17 +233,25 @@ CALL NOW: 202-317-0875
 
 <div class="price">$50 visit + $40/hour</div>
 
-<p>No surprises, clear and affordable.</p>
+<p>No surprises. Clear and affordable.</p>
 
-<a class="cta" href="tel:2023170875">Call now</a>
+<a class="cta" href="tel:2023170875">
+Call now
+</a>
 
 </div>
 
-<div class="footer">
+<!-- FINAL CTA -->
+
+<div class="final">
 
 <h2>Still struggling with technology?</h2>
 
-<a href="tel:2023170875">202-317-0875</a>
+<a href="tel:2023170875">
+202-317-0875
+</a>
+
+<p>Same-day Owensboro service.</p>
 
 </div>
 
