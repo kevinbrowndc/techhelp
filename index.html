@@ -1,72 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tech Help at Home — Owensboro</title>
+<title>Owensboro Tech Help</title>
 
 <style>
 
 body{
-font-family: Arial, Helvetica, sans-serif;
+font-family:Arial;
 margin:0;
-background:#f3f1f3;
-color:#1e2a3a;
+background:#f4f4f4;
+color:#1f2a3a;
 }
 
 .container{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:40px 30px;
+padding:40px;
 }
 
-.topbar{
+.header{
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:30px;
+margin-bottom:40px;
 }
 
-.title{
-font-size:34px;
-font-weight:800;
-}
-
-.subtitle{
-color:#445066;
-margin-top:6px;
-}
-
-.callbtn{
+.call{
 background:#ef4b43;
 color:white;
-padding:14px 24px;
-border-radius:40px;
-font-size:20px;
-font-weight:bold;
+padding:12px 20px;
+border-radius:25px;
 text-decoration:none;
+font-weight:bold;
 }
 
 .hero{
-display:grid;
-grid-template-columns:1fr 1fr;
+display:flex;
 gap:40px;
 align-items:center;
 }
 
-.hero h1{
-font-size:64px;
-line-height:1;
-margin:0 0 20px 0;
+.hero-text{
+flex:1;
+}
+
+.hero img{
+width:400px;
+height:auto;
+border-radius:8px;
+}
+
+h1{
+font-size:56px;
+margin-bottom:10px;
 }
 
 .red{
 color:#ef4b43;
-}
-
-.hero p{
-font-size:22px;
-color:#3a4658;
 }
 
 .cta{
@@ -74,68 +65,55 @@ display:inline-block;
 background:#ef4b43;
 color:white;
 padding:14px 22px;
-font-size:20px;
-border-radius:10px;
-margin-top:20px;
+border-radius:8px;
 text-decoration:none;
+margin-top:20px;
+font-size:18px;
 }
 
-.hero img{
-width:100%;
-max-width:520px;
-border-radius:8px;
+ul{
+font-size:20px;
+line-height:1.6;
 }
 
 .section{
-margin-top:50px;
-display:grid;
-grid-template-columns:1fr 1fr;
+margin-top:60px;
+display:flex;
 gap:40px;
 align-items:center;
 }
 
-.section h2{
-font-size:44px;
-margin-bottom:10px;
-}
-
 .price{
-font-size:28px;
+font-size:26px;
 font-weight:bold;
 color:#1e3a68;
 }
 
-ul{
-font-size:22px;
-line-height:1.6;
-}
-
 .footer{
 text-align:center;
-margin-top:50px;
+margin-top:60px;
 }
 
 .footer a{
 background:#ef4b43;
 color:white;
-padding:16px 26px;
-border-radius:10px;
-font-size:24px;
+padding:16px 24px;
+border-radius:8px;
+font-size:22px;
 text-decoration:none;
 }
 
 @media(max-width:900px){
 
-.hero{
-grid-template-columns:1fr;
-}
-
+.hero,
 .section{
-grid-template-columns:1fr;
+flex-direction:column;
+text-align:center;
 }
 
-.hero h1{
-font-size:46px;
+.hero img{
+width:100%;
+max-width:400px;
 }
 
 }
@@ -147,18 +125,21 @@ font-size:46px;
 
 <div class="container">
 
-<div class="topbar">
+<div class="header">
 <div>
-<div class="title">Tech Help at Home — Owensboro</div>
-<div class="subtitle">Local • Friendly • Same-Day Service</div>
+<h2>Tech Help at Home — Owensboro</h2>
+<p>Local • Friendly • Same-Day Service</p>
 </div>
 
-<a class="callbtn" href="tel:2023170875">Call Now: 202-317-0875</a>
+<a class="call" href="tel:2023170875">
+Call Now: 202-317-0875
+</a>
+
 </div>
 
 <div class="hero">
 
-<div>
+<div class="hero-text">
 
 <h1>
 Tech Problems?<br>
@@ -166,27 +147,25 @@ We Fix Them <span class="red">Today.</span>
 </h1>
 
 <p>
-Local in-home tech help for phones, computers, WiFi, printers, and TVs.
+Local in-home tech help for phones, computers, WiFi, printers and TVs.
 </p>
 
-<a class="cta" href="tel:2023170875">CALL NOW: 202-317-0875</a>
-
-<p>Serving Owensboro & Daviess County</p>
+<a class="cta" href="tel:2023170875">
+CALL NOW: 202-317-0875
+</a>
 
 <ul>
-<li>✓ WiFi not working</li>
-<li>✓ Printer stopped working</li>
-<li>✓ Computer running slow</li>
-<li>✓ Email locked</li>
-<li>✓ Smart TV setup</li>
-<li>✓ New phone confusion</li>
+<li>WiFi not working</li>
+<li>Printer stopped working</li>
+<li>Computer running slow</li>
+<li>Email locked</li>
+<li>Smart TV setup</li>
+<li>New phone confusion</li>
 </ul>
 
 </div>
 
-<div>
-<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Tech support">
-</div>
+<img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg">
 
 </div>
 
@@ -200,15 +179,13 @@ Local in-home tech help for phones, computers, WiFi, printers, and TVs.
 
 <p>No surprises, clear and affordable.</p>
 
-<a class="cta" href="tel:2023170875">Call now: 202-317-0875</a>
-
-<p>Reliable local help</p>
+<a class="cta" href="tel:2023170875">
+Call now
+</a>
 
 </div>
 
-<div>
-<img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg" alt="Laptop support">
-</div>
+<img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg">
 
 </div>
 
@@ -220,7 +197,7 @@ Local in-home tech help for phones, computers, WiFi, printers, and TVs.
 
 <a href="tel:2023170875">202-317-0875</a>
 
-<p>Same-Day Owensboro service.</p>
+<p>Same-Day Owensboro service</p>
 
 </div>
 
